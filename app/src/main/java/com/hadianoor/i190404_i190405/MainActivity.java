@@ -3,6 +3,7 @@ package com.hadianoor.i190404_i190405;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth mAuth;
     EditText email,pass;
-    Button signup;
+    Button signup,button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +32,16 @@ public class MainActivity extends AppCompatActivity {
         email=findViewById(R.id.email);
         pass=findViewById(R.id.pass);
         signup=findViewById(R.id.signup);
+        button=findViewById(R.id.button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,Signin.class);
+                startActivity(intent);
+            }
+        });
+
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                                 if(task.isSuccessful())
                                 {
                                     Toast.makeText(MainActivity.this,"Succesfully created user",Toast.LENGTH_LONG).show();
+                                    sendUsertoPlaylist();
                                     Toast.makeText(MainActivity.this,mAuth.getCurrentUser().getUid(),Toast.LENGTH_LONG).show();
                                 }
                             }
@@ -65,5 +77,12 @@ public class MainActivity extends AppCompatActivity {
         {
             Toast.makeText(MainActivity.this,user.getUid()+" ",Toast.LENGTH_SHORT).show();
         }
+    }
+
+    protected void sendUsertoPlaylist() {
+        Intent intent=new Intent(MainActivity.this,Signin.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        finish();
     }
 }

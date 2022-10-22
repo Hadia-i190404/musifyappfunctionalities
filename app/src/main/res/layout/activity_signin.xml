@@ -1,9 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:weightSum="1"
+    android:orientation="vertical"
+    android:background="@color/black"
     tools:context=".Signin">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.9"
+        android:background="@color/black">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textSize="30dp"
+            android:textColor="@color/white"
+            android:gravity="right"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.1"
+        android:background="@color/black"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="248dp"
+            android:layout_height="163dp"
+            android:layout_weight="0.05"
+            android:gravity="center"
+
+            android:src="@drawable/musify"></ImageView>
+
+        <TextView
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:text="Musify"
+            android:textColor="@color/white"
+            android:textSize="50dp">
+
+        </TextView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_weight="0.025">
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="0.025"
+            android:gravity="center">
+
+
+            <EditText
+                android:id="@+id/email"
+                android:background="@drawable/golname"
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:hint="  Email"
+                android:textColor="#FFC20F"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="13dp"
+            android:layout_weight="0.025">
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="0.025"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/pass"
+                android:layout_width="350dp"
+                android:background="@drawable/golname"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="textVisiblePassword"
+                android:hint="  Password"
+                android:textColor="#FFC20F"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="13dp"
+            android:layout_weight="0.20">
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            >
+            <LinearLayout
+                android:layout_width="10dp"
+                android:layout_height="5dp">
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/signin"
+                android:layout_width="390dp"
+                android:layout_height="70dp"
+                android:layout_marginBottom="100dp"
+                android:text="Sign In"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                app:backgroundTint="#FFC20F"
+                app:cornerRadius="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="#fff">
+
+            </Button>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="100dp"
+            android:text="Forgot Your Password"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:backgroundTint="@color/black"
+            app:cornerRadius="20dp"
+            android:textColor="#FFC20F"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="#fff">
+
+        </Button>
+
+
+    </LinearLayout>
+
+</LinearLayout>
