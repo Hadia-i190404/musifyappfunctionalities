@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "897063026806",
+    "project_id": "i190404-i190405",
+    "storage_bucket": "i190404-i190405.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897063026806:android:d1608fb24c1864ce2adf57",
+        "android_client_info": {
+          "package_name": "com.hadianoor.i190404_i190405"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "897063026806-gcj657grauhnkghfd9md6n1vgk81gc01.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWAeVXlxBe13CTzOnsmKa0t0c5IAmNzSo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "897063026806-gcj657grauhnkghfd9md6n1vgk81gc01.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
