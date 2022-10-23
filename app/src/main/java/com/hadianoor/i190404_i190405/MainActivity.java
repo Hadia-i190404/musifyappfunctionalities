@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void sendUsertoPlaylist() {
-        Intent intent=new Intent(MainActivity.this,Signin.class);
+        Intent intent=new Intent(MainActivity.this,Profile.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         finish();
