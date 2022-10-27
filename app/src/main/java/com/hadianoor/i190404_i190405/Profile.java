@@ -72,6 +72,7 @@ public class Profile extends AppCompatActivity {
                 myRef = myRef.push();
                 myRef.getKey();
                 myRef.setValue(m);
+                sendUsertoPlaylist();
                 finish();
 
             }
@@ -139,84 +140,15 @@ public class Profile extends AppCompatActivity {
         }
     }
 
+    protected void sendUsertoPlaylist() {
+        Intent intent=new Intent(Profile.this,MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        finish();
+    }
+
 }
-/*        mAuth= FirebaseAuth.getInstance();
-        FirebaseUser firebaseUser= mAuth.getCurrentUser();
-        ReadWriteUserDetails writeUserDetails=new ReadWriteUserDetails(fullname,lastname,gen,bi);
 
-        DatabaseReference referenceProfile=FirebaseDatabase.getInstance().getReference("Registered Users");
-
-        referenceProfile.child(firebaseUser.getUid()).setValue(writeUserDetails)
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if(task.isSuccessful())
-                        {
-                            Toast.makeText(Profile.this,"User Registered Successfully",Toast.LENGTH_LONG).show();
-
-                            Intent intent=new Intent(Profile.this,Playlist.class);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK
-                            | Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(intent);
-                            finish();
-                        }
-                        else
-                        {
-                            Toast.makeText(Profile.this,"User Registered Failure",Toast.LENGTH_LONG).show();
-
-                        }
-                    }
-                });
-
-
-
-        if(firebaseUser==null)
-        {
-            Toast.makeText(Profile.this,"Something is wrong user's details not available",
-                    Toast.LENGTH_LONG).show();
-
-        }
-        else
-        {
-            showUserProfile(firebaseUser);
-        }
-
-    }
-
-    private void showUserProfile(FirebaseUser firebaseUser) {
-        String userID= firebaseUser.getUid();
-
-        DatabaseReference referenceProfile= FirebaseDatabase.getInstance().getReference("Registered User");
-        referenceProfile.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                ReadWriteUserDetails readWriteUserDetails=snapshot.getValue(ReadWriteUserDetails.class);
-                if (readWriteUserDetails!=null)
-                {
-                    fullname=readWriteUserDetails.fname;
-                    lastname=readWriteUserDetails.lname;
-                    gen=readWriteUserDetails.gender;
-                    bi=readWriteUserDetails.bio;
-
-                    fname.setText(fullname);
-                    lname.setText(lastname);
-                    gender.setText(gen);
-                    bio.setText(bi);
-
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(Profile.this,"Something is wrong user's details not available",
-                        Toast.LENGTH_LONG).show();
-            }
-        });
-    }
-
-    private void createprofile(String fname,String lname, String gender, String bio)
-    {
-*/
 
 
 

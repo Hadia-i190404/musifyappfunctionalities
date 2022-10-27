@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:weightSum="1"
+    android:orientation="vertical"
+    tools:context=".MusicPlayerActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05">
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.14"
+        android:weightSum="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/song_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text=" Song Title"
+            android:layout_weight="0.8"
+            android:textColor="@color/white"
+            android:textSize="40dp">
+
+        </TextView>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:orientation="vertical"
+            android:weightSum="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.2">
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/downwardarrow">
+
+                </ImageView>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="   By Artist"
+            android:gravity="fill_horizontal"
+            android:textColor="#FFC206"
+            android:textSize="20dp">
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.35">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/despacitofinal">
+
+        </ImageView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05">
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:layout_gravity="center">
+        <LinearLayout
+            android:layout_width="39dp"
+            android:layout_height="match_parent">
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/prev"
+            android:backgroundTint="@color/black"
+            android:layout_width="130dp"
+            android:layout_height="110dp"
+            android:src="@drawable/prev_des">
+        </ImageButton>
+        <ImageButton
+            android:id="@+id/pause"
+            android:backgroundTint="@color/black"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:src="@drawable/play_new">
+        </ImageButton>
+        <ImageButton
+            android:id="@+id/next"
+            android:backgroundTint="@color/black"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:src="@drawable/next_des">
+        </ImageButton>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.075"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekbar"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/white"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/currenttimetv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="0:00"
+                android:layout_weight="0.1"
+                android:textColor="#FFC206">
+            </TextView>
+            <TextView
+                android:gravity="right"
+                android:id="@+id/totaltimetv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="0:00"
+                android:layout_weight="0.1"
+                android:textColor="#FFC206">
+            </TextView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.14"
+        android:background="#2A2831"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="110dp"
+            android:layout_weight="0.03"
+            >
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:weightSum="1"
+                android:orientation="vertical"
+                >
+                <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="0.01"
+                    android:background="#2A2831"
+                    android:src="@drawable/like">
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="112dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="Liked"
+                    android:textColor="@color/white"
+                    android:textSize="17dp">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="110dp"
+            android:layout_weight="0.03"
+            >
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="110dp"
+                android:weightSum="1"
+                android:orientation="vertical"
+                >
+                <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="0.01"
+                    android:background="#2A2831"
+                    android:src="@drawable/add">
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="102dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:background="#2A2831"
+                    android:text="Add"
+                    android:textColor="@color/white"
+                    android:textSize="17dp">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="110dp"
+            android:layout_weight="0.03"
+            >
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:weightSum="1"
+                android:orientation="vertical"
+                >
+                <ImageButton
+                    android:layout_width="90dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="0.01"
+                    android:background="#2A2831"
+                    android:src="@drawable/dhoondo">
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="102dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="Search"
+                    android:textColor="@color/white"
+                    android:textSize="17dp">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="110dp"
+            android:layout_weight="0.03"
+            >
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:weightSum="1"
+                android:orientation="vertical"
+                >
+                <ImageButton
+                    android:layout_width="90dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="0.01"
+                    android:background="#2A2831"
+                    android:src="@drawable/listen">
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="102dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="Listen Later"
+                    android:textColor="@color/white"
+                    android:textSize="16dp">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

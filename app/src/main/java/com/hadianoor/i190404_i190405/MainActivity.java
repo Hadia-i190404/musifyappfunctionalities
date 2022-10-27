@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,Signin.class);
+                Intent intent=new Intent(MainActivity.this,MusicListAdapter.class);
                 startActivity(intent);
             }
         });
